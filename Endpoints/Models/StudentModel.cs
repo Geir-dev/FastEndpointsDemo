@@ -1,4 +1,4 @@
-﻿namespace FastEndpointsDemo.Endpoints.Endpoints.Models
+﻿namespace FastEndpointsDemo.Endpoints.Models
 {
     public class StudentModel
     {
@@ -9,6 +9,6 @@
         public string? Phone { get; set; }
         public int Age { get; set; }
         public DateTimeOffset Created { get; set; }
-        
+
     }
 }
