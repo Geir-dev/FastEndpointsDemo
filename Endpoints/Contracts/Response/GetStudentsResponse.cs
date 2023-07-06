@@ -1,6 +1,6 @@
-﻿using FastEndpointsDemo.Data;
+﻿using EndpointsDemo.Data;
 
-namespace FastEndpointsDemo.Endpoints.Contracts.Response
+namespace EndpointsDemo.Endpoints.Contracts.Response
 {
     public class GetStudentsResponse
     {

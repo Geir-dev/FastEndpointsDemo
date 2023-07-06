@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FastEndpointsDemo.Data.Migrations
+namespace EndpointsDemo.Data.Migrations
 {
     /// <inheritdoc />
     public partial class StudentDatabase : Migration

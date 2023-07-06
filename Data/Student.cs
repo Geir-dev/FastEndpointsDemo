@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FastEndpointsDemo.Data
+namespace EndpointsDemo.Data
 {
     public class Student
     {

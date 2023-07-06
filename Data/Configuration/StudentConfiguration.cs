@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FastEndpointsDemo.Data.Configuration
+namespace EndpointsDemo.Data.Configuration
 {
     internal class StudentConfiguration : BaseConfiguration<Student>
     {

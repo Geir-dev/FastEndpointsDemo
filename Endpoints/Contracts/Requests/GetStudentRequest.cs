@@ -1,6 +1,6 @@
 ﻿
 
-namespace FastEndpointsDemo.Endpoints.Contracts.Requests
+namespace EndpointsDemo.Endpoints.Contracts.Requests
 {
     public class GetStudentRequest
     {

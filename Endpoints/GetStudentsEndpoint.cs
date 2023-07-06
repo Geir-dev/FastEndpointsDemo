@@ -1,11 +1,10 @@
-﻿using FastEndpoints;
-using FastEndpointsDemo.Data;
-using FastEndpointsDemo.Endpoints.Contracts.Requests;
-using FastEndpointsDemo.Endpoints.Contracts.Response;
+﻿using EndpointsDemo.Data;
+using EndpointsDemo.Endpoints.Contracts.Requests;
+using EndpointsDemo.Endpoints.Contracts.Response;
 
-namespace FastEndpointsDemo.Endpoints
+namespace EndpointsDemo.Endpoints
 {
-    public class GetStudentsEndpoint : Endpoint<GetStudentsResponse>
+    public class GetStudentsEndpoint : Endpoint<GetStudentRequest, GetStudentsResponse>
     {
         private readonly StudentDbContext studentDbContext;
 
@@ -15,7 +14,7 @@ namespace FastEndpointsDemo.Endpoints
         }
         public override void Configure()
         {
-            Get("/student");
+            Get("/students");
             Description(d => d
             .Produces<GetStudentsResponse>(200, "application/json")
             .ProducesProblemFE<InternalErrorResponse>(500));
@@ -23,7 +22,8 @@ namespace FastEndpointsDemo.Endpoints
         public override async Task HandleAsync(GetStudentsResponse res, CancellationToken ct)
         {
             var student = studentDbContext.Students;
-            res = new GetStudentsResponse
+
+            response = new GetStudentsResponse
             {
                 Students = student.Select(x => new GetStudentResponse
                 {
@@ -36,7 +36,9 @@ namespace FastEndpointsDemo.Endpoints
                     Created = x.Created,
                 })
             };
-            await SendAsync(res, cancellation: ct);
+
+            await SendAsync(response, cancellation: ct);
+
         }
     }
 }

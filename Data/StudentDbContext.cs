@@ -1,7 +1,7 @@
-﻿using FastEndpointsDemo.Data.Configuration;
+﻿using EndpointsDemo.Data.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace FastEndpointsDemo.Data
+namespace EndpointsDemo.Data
 {
     public class StudentDbContext : DbContext
     {

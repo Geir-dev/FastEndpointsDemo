@@ -1,7 +1,7 @@
-﻿using FastEndpointsDemo.Data;
+﻿using EndpointsDemo.Data;
 using System.Text.Json.Serialization;
 
-namespace FastEndpointsDemo.Endpoints.Contracts.Response
+namespace EndpointsDemo.Endpoints.Contracts.Response
 {
     public class GetStudentResponse
     {

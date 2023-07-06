@@ -1,13 +1,13 @@
 using FastEndpoints;
 using FastEndpoints.Swagger;
-using FastEndpointsDemo.Data;
+using EndpointsDemo.Data;
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddFastEndpoints();
 builder.Services.AddSwaggerDocument();
+builder.Services.AddMvcCore().AddApiExplorer();
 
 builder.Services.AddDbContext<StudentDbContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));

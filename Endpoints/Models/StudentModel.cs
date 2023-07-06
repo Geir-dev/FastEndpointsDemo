@@ -1,4 +1,4 @@
-﻿namespace FastEndpointsDemo.Endpoints.Models
+﻿namespace EndpointsDemo.Endpoints.Endpoints.Models
 {
     public class StudentModel
     {

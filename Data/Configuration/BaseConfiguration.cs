@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FastEndpointsDemo.Data.Configuration
+namespace EndpointsDemo.Data.Configuration
 {
     internal abstract class BaseConfiguration<TSample> : IEntityTypeConfiguration<TSample>
         where TSample : Student
