@@ -7,11 +7,6 @@ namespace EndpointsDemo.Data
     {
         public DbSet<Student> Students { get; set; } = null!;
 
-        public StudentDbContext()
-        {
-
-        }
-
         public StudentDbContext(DbContextOptions<StudentDbContext> options)
             : base(options) 
         {            
