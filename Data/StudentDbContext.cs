@@ -12,6 +12,14 @@ namespace EndpointsDemo.Data
         {            
         }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder
+        //        .UseSqlServer(
+        //            @"Server=(localdb)\\mssqllocaldb;Database=Students;MultipleActiveResultSets=true",
+        //            options => options.EnableRetryOnFailure());
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

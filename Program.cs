@@ -24,6 +24,8 @@ builder.Services.AddMvcCore().AddApiExplorer();
 builder.Services.AddDbContext<StudentDbContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 
+
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
